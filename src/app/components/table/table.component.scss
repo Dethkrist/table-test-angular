@@ -1,0 +1,45 @@
+.table__container {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.table__search-input {
+  margin-bottom: 5vh;
+  border: 1px solid #a0a0a0;
+  width: 30vw;
+  height: 5vh;
+}
+.table {
+  width: 80vw;
+  table-layout: fixed;
+  border-collapse: collapse;
+  box-shadow: 1px 1px 10px black;
+}
+.table__header {
+  border-bottom: 1px solid #a0a0a0;
+  .table__header-title:nth-child(2) {
+    width: 50%;
+  }
+  }
+.table__header-title {
+  padding: 1em;
+  text-align: center;
+  cursor: pointer;
+  &:hover {color: #a0a0a0}
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.table__body {
+}
+.table__body-row {
+  border-bottom: 1px solid #a0a0a0;
+  &:nth-child(odd) {
+    background: #dbdada;
+  }
+}
+.table__body-element {
+  padding: 1em;
+  text-align: center;
+}

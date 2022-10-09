@@ -1,0 +1,21 @@
+<div class="table__container">
+  <input type="text" class="table__search-input" placeholder="Search..." [(ngModel)]="searchText">
+  <table class="table">
+    <thead class="table__header">
+      <tr>
+        <th class="table__header-title" [appSort]="result" data-order="desc" data-name="title">Title</th>
+        <th class="table__header-title" [appSort]="result" data-order="desc" data-name="description">Description</th>
+        <th class="table__header-title" [appSort]="result" data-order="desc" data-name="pageCount">Page Count</th>
+        <th class="table__header-title" [appSort]="result" data-order="desc" data-name="publishDate">Publish Date</th>
+      </tr>
+    </thead>
+    <tbody class="table__body">
+      <tr class="table__body-row" *ngFor="let book of result | searchFilter: searchText">
+        <td class="table__body-element">{{book.title}}</td>
+        <td class="table__body-element">{{book.description}}</td>
+        <td class="table__body-element">{{book.pageCount}}</td>
+        <td class="table__body-element">{{book.publishDate | date}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
