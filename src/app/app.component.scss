@@ -1,9 +1,8 @@
+@import './styles/mixins.scss';
+
 .wrapper {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column, center, center);
 }
 
 .container {
@@ -13,9 +12,7 @@
 }
 
 .loading__spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(row, center, center);
   width: 8em;
   height: 8em;
   border-top: 0.8em solid black;

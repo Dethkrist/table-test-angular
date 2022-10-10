@@ -23,7 +23,7 @@ import { BookChartComponent } from './components/chart/chart.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
