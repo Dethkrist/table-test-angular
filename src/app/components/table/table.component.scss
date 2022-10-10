@@ -1,5 +1,5 @@
 .table__container {
-  margin-top: 10vh;
+  margin-left: 10vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,10 +12,13 @@
   height: 5vh;
 }
 .table {
-  width: 80vw;
+  display: inline-block;
+  width: 60vw;
+  height: 70vh;
+  overflow: auto;
   table-layout: fixed;
   border-collapse: collapse;
-  box-shadow: 1px 1px 10px black;
+  box-shadow: 1px 1px 3px black;
 }
 .table__header {
   border-bottom: 1px solid #a0a0a0;
@@ -35,9 +38,6 @@
 }
 .table__body-row {
   border-bottom: 1px solid #a0a0a0;
-  &:nth-child(odd) {
-    background: #dbdada;
-  }
 }
 .table__body-element {
   padding: 1em;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/apiService.service';
 import Book from "src/app/interfaces/book.interface"; 
 import { SortDirective } from 'src/app/directive/sort.directive';
@@ -8,26 +8,9 @@ import { SortDirective } from 'src/app/directive/sort.directive';
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
-  providers: [ApiService, SortDirective]
+  providers: [SortDirective]
 })
-export class TableComponent implements OnInit {
-  result!: Book[];
-  searchText: string = "";
-
-  constructor(private apiService: ApiService) {}
-
-  ngOnInit(): void {
-    this.getBooks();
-  }
-
-
-  getBooks() {
-    return this.apiService.getBooks()
-      .subscribe(
-        (data) => {
-          this.result = data
-        }
-      )
-  }
-
+export class TableComponent {
+  searchText?: any = '';
+  @Input() result!: Book[]
 }

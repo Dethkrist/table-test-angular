@@ -1,3 +1,8 @@
-<div class="container">
-  <app-table></app-table> 
+
+<div class="wrapper">
+  <div class="container" *ngIf="!loading">
+    <app-chart [result]="result"></app-chart>
+    <app-table [result]="result"></app-table>
+  </div>
+  <div class="loading__spinner" *ngIf="loading"></div>
 </div>
